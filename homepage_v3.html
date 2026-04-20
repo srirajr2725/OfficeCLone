@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Unscrambler - Unscramble Letters To Find Words</title>
+    <meta name="description" content="WordUnscrambler.me - Unscramble letters to make new words. Find hidden words for Scrabble, Wordle, Words with Friends, and also score better, learn faster and win! " />
+<link rel="canonical" href="https://wordunscrambler.me" />
+
+    <!-- styles -->
+    <link href="/cdn/style-v39.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png" />
+    
+    <!-- google dfp ad tag for header -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+    
+      <!-- for landing page -->
+      <!-- serve : single ATF Ad unit for landing page-->
+  <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      var mapping_atf = googletag.sizeMapping()
+        .addSize([1030, 0], [[970, 90], [728, 90]])
+        .addSize([755, 0], [728, 90])
+        .addSize([0, 0], [[320, 50], [320, 100]])
+        .build();      
+        slot1 = googletag.defineSlot('/6248449/wsm_home_atf', [[320, 50], [320, 100], [728, 90], [970, 90]], 'div-gpt-ad-1619002108881-0').defineSizeMapping(mapping_atf).addService(googletag.pubads());
+
+      googletag.enableServices();
+    });
+  </script>
+    
+    
+
+  </head>
+
+  <body>
+    <!-- header starts here -->
+    <div class="container">
+  <nav class="tiny-nav" id="tinyNavTop">
+    <a href="/" class="brand">
+      <img src="/images/wsm_logo.png" alt="logo" width="200" height="40">
+    </a>
+
+    <span class="menu-icon" onclick="openNav()">&#9776; MENU</span>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/check-dictionary" title="Dictionary Lookup">Check Dictionary</a> </li>
+        <li><a href="/descrambler" title="Word Descrambler">Word Descrambler</a> </li>
+        <li><a href="/word-scramble" title="Word Scramble">Word Scramble</a> </li>
+        <li><a href="/wordfeud-helper" title="Wordfeud Helper">Wordfeud Helper</a> </li>
+        <li><a href="/descrambler" title="Word Descrambler">Word Descrambler</a> </li>
+        <li><a href="/anagram-solver" title="Anagram Solver">Anagram Solver</a> </li>
+        <li><a href="/random-word-generator" title="Random Word Generator">Random Word Generator</a> </li>
+        <li><a href="/wordle-solver" title="Wordle Solver">Wordle Solver</a> </li>
+        <li><a href="/quordle-solver" title="Quordle Solver">Quordle Solver</a> </li>
+        <li><a href="/sitemap" title="Our Sitemap">Sitemap</a> </li>
+        <li><a href="/about" title="Our Sitemap">About</a> </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+    <!-- end of header -->
+
+    <!-- main content -->
+    <div class="container">
+  <div class="content" id="scrollMarkerTop">
+    <!-- title -->
+    <div class="title">
+      <h1>Word Unscrambler</h1>
+      <p class="subtitle"><em>simple, easy and fast word unscrambler!</em> </p>
+    </div>
+    <div class="main">     
+       <form class="tiny-form" id="mainForm" action="/unscramble" method="post" autocomplete="off" autocorrect="off">
+    <label for="ltrInput" class="text-light">Enter letters (max: 15, use ? or * for blank)</label>
+    <div class="input-wrapper flex-default">
+      
+        <input type="text" name="letters" id="ltrInput" placeholder="tra" onkeyup="handleSpaces(this);" spellcheck="false" autocomplete="off" maxlength="15" autocorrect="off" autocapitalize="off" autofocus required/>
+        <button type="button" class="hide" id="clearIconBtn"><span id="clear-icon">&#x2718;</span></button>
+      
+    </div>
+    <div class="button-wrapper">
+      <button type="submit" class="tiny-button button-primary">Unscramble It</button>
+      <button type="button" class="tiny-button" id="advButton">Options</button>
+    </div> 
+
+    <!-- advanced options -->
+    <div class="hide" id="advancedOptions">
+      <div class="flex-default">
+        <div class="option">
+        <label>Select Dictionary</label>
+        <select name="dictionary" id="dictCode">
+          <option value="twl">NWL - US/CA</option>
+          
+            <option value="sowpods">CSW - UK</option>
+            <option value="enable">ENABLE</option>
+          
+        </select>
+        </div>
+        <div class="option">
+          <label>Must include </label>
+          <input type="text" name="substr" id="subStr" placeholder="q" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off">
+        </div>
+      </div>
+
+      <div class="flex-default">
+        <div class="option">
+          <label>Starts with </label>
+          <input type="text" name="prefix" id="prefixLtr" placeholder="prefix" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off">
+        </div>
+        <div class="option">
+          <label>Ends with </label>
+          <input type="text" name="suffix" id="suffixLtr" placeholder="suffix" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off">
+        </div>
+      </div>
+    </div> <!-- end of advanced options --> 
+</form> 
+
+
+
+     
+    </div> <!-- main -->
+    
+    <div class="desc">
+      <div class="intro">
+        <p>Word Unscrambler is a simple online tool for unscrambling and solving scrambled words,
+  often useful in discovering top scoring words for Scrabble, Words with Friends, Wordle, Wordscapes, Wordfeud, TextTwist, Word Cookies, Anagrams etc.</p>
+      </div>
+
+      <div class="ads ads-pages ads-home">
+  <div class="ads-label align-center"> <span>ADVERTISEMENT</span> </div>
+  <div class="ads-wrapper reserved-slot-home">
+    <!-- /6248449/wsm_home_atf -->
+    <div id='div-gpt-ad-1619002108881-0'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619002108881-0'); });
+      </script>
+    </div>
+  </div>
+</div>
+
+      <h2>What is the use of Word Unscrambler?</h2>
+
+        <p>
+          When you’re stuck with some random letters, want to make words out of those <a href="https://wordunscrambler.me/word-scramble">scrambled letters?</a> well, that’s what this website is designed for. Whether you need any help or just want to learn new words or perhaps you want to cheat a little :-), with such word games, this website will save your time and frustration often. Words games are going to be more fun if you have a well designed site like this one available at disposal. It also becomes easier to find <a href="https://wordunscrambler.me/word-cookies-answers">answers for Word Cookies</a>, <a href="https://wordunscrambler.me/anagram-solver">Anagrams</a> or <a href="https://wordunscrambler.me/wordfeud-helper">Wordfeud</a> if you use this site well. We also got a dedicated <a href="https://wordunscrambler.me/wordle-solver">solver for Wordle</a> if you like to play Wordle puzzles everyday.
+        </p>
+
+        <p>
+          You can enter up to 12 letters (including two wild cards or blank tiles) and it shows you the valid words that can
+          be made from the scrambled letters on board. Using this word helper tool, you will not only make yourself stronger
+          against your opponent but also learn plenty of useful words and new combinations of letters, that would enrich your
+          vocabulary as well (especially applicable to kids or learners or an enthusiast).
+        </p>
+
+        <h2>How to use advanced options?</h2>
+        <p>
+          You can change the dictionary if that’s applicable to the game you’re playing, otherwise leave it as it is.
+          The default is TWL/OTCWL (official Scrabble dictionary for US/Canada/Thailand, based on the word list from NASPA).
+          The other supported dictionary is SOWPODS (for UK and all, based on word list from CSW).
+        </p>
+
+        <p>
+          When you click on 'Options' button, you will see these options.
+          You can filter results by using “Starts with” or “End with” or “Must include” option.
+          Please use this feature carefully otherwise this will not return any valid words at all.
+          For words greater than 5 letters or when using wildcards it’s quite useful. This is reset with every search,
+          however dctionary preference is saved for subsequent uses.
+        </p>
+
+        <!-- removed for now -->
+           
+
+        <h2>How does this work ?</h2>
+        <p>It's very simple and easy, certainly fun to use. Lets say, you got these letters at your hand : <b>shirkequl</b>.
+            If you got a blank tile, then append <i>?</i> in input box. Want to use advanced options or change the dictionary?
+            well, you're free to use that otherwise hit the Unscramble button and let this site do the heavy work for you!
+            Here are the results for above search : </p>
+
+        <ul>
+          <li><i>8 letter words</i>: rushlike</li>
+          <li><i>7 letter words</i>: hulkier, huskier etc</li>
+          <li><i>6 letter words</i>: shrike, hikers, quirks, squire, lusher, relish etc</li>
+          <li><i>5 letter words</i>: hiker, hikes, skier, shirk, hurls, lures, liers etc</li>
+          <li><i>4 letter words</i>: hike, risk, rise, heir, rule, rush, rusk, slur, sure, silk, sukh etc</li>
+          <li><i>3 letter words</i>: her, his, ski, hie, qis, sir, lie etc</li>
+          <li><i>2 letter words</i>: hi, sh, is, er, qi etc</li>
+        </ul>
+
+        <p>
+          <strong>Tip</strong> : If the total no of words returned are too high, you can specify prefix or/both suffix using advanced options,
+          to get more specific words you’re looking for.
+        </p>
+
+      <div class="notice">
+        <p><b>Note</b>:
+  Feel free to send us any feedback or report on the new look of our site. Thank you for visiting our website.
+ </p>
+      </div>
+    </div> <!-- desc -->
+
+  </div> <!-- content -->
+</div> <!-- container -->
+
+  
+
+
+
+
+    <!-- footer starts here -->
+    <div class="container">
+  <footer class="content">
+    <div class="tiny-menu">
+      <ul class="tiny-menu-list">
+        <li class="tiny-menu-item tiny-menu-disabled">
+             Other pages :
+          </li>
+         <li class="tiny-menu-item">
+              <a href="https://jumblesolver.me" target="_blank">Jumble Solver</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://wordfinder.pro" target="_blank">Word Finder</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://scrabblewordfinder.org/words-with-friends-cheat" target="_blank">Words with Friends Cheat</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://wordsolver.co" target="_blank">Word Solver</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="/wordle-solver">Wordle Solver</a>
+          </li>
+        </ul>
+    </div>
+  </footer>
+</div>
+<!-- Footer -->
+<div class="container">
+  <footer class="content">
+    <div class="tiny-menu">
+      <ul class="tiny-menu-list">
+          <li class="tiny-menu-item tiny-menu-disabled">
+              &copy; 2026
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://wordunscrambler.me">WordUnscrambler.me</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://wordunscrambler.me/word-scramble">Word Scramble</a>
+          </li>
+          <li class="tiny-menu-item">
+              <a href="https://wordunscrambler.me/descrambler">Word Descrambler</a>
+          </li>
+
+          <li class="tiny-menu-item">
+             <a href="/sitemap">Sitemap</a>
+          </li>
+
+          <li class="tiny-menu-item">
+             <a href="/about">About</a>
+          </li>
+
+          <li class="tiny-menu-item">
+             <a href="/contact">Contact</a>
+          </li>
+
+          <li class="tiny-menu-item">
+             <a href="/privacy-policy">Privacy</a>
+          </li>
+      </ul>
+    </div>
+  </footer>
+</div>  
+
+    <!-- footer ends here -->
+
+
+    <script src="/cdn/script-v10.js" type="text/javascript"></script>
+    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DWNLPX6CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8DWNLPX6CN');
+    </script>
+
+  </body>
+</html>

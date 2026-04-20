@@ -1,0 +1,14 @@
+{
+  "name": "word-unscrambler-client",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "devDependencies": {
+    "vite": "^8.0.9"
+  }
+}
